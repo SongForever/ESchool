@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <!--有了spring下面这些可以不要-->
+    <!--&lt;!&ndash; 加载外部的数据库配置资源文件 &ndash;&gt;
+    <properties resource="jdbc.properties"></properties>
+    &lt;!&ndash;配置数据库链接环境&ndash;&gt;
+    <environments default="development">
+        <environment id="development">
+            <transactionManager type="JDBC" />
+            <dataSource type="UNPOOLED">
+                <property name="driver" value="${driverClass}" />
+                <property name="url" value="${jdbcUrl}" />
+                <property name="username" value="${username}" />
+                <property name="password" value="${password}" />
+            </dataSource>
+        </environment>
+    </environments>-->
+
+    <!--这个不能不要-->
+    <mappers>
+        <mapper resource="userMapper.xml"></mapper>
+    </mappers>
+</configuration>
